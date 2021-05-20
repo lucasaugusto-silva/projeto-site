@@ -1,0 +1,99 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+header {
+  position: relative;              /* por padrão o elemento é position: static, ao mudar para relative o elemento filho consegue se tornar position absolute   */
+  background: gray;
+  height: 100px;
+}
+
+nav, ul, li  {
+  list-style: none;                               
+  display: inline-block;              /* faz com que a lista fique uma do lado da outra, por padrão todo elemento é display block */
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul, li {
+  text-align: center;
+  font-size: 20px;
+  margin-left: 20px;
+  padding: 10px;
+  margin-right: 20px;
+}
+
+/* efeito de cor ao passar o mouse por cima do elemento */
+ul li:hover {
+  background: white;
+}
+
+/* ao deixar o menu como absolute podemos movimentar os elementos de acordo com a posição relativa da tela inteira */
+.menu {
+  position: absolute;
+  margin: 20px;
+  right: 0px;
+}
+
+.logo  {
+  position: relative;
+  display: inline-block;
+  left: 80px;
+  top: 8px;
+}
+
+.logo p {
+  display: inline-block;
+  top: 30px;
+  font-size: 20px;
+}
+
+/* por padrão a tag img é display inline, foi alterado para display block para que a propriedade float fosse ativada, para que a logo e o nome ficassem lado a lado*/
+.imagem-cabecalho {
+  display: block;
+  float: left;
+  border-radius: 50px;
+  margin-right: 20px;
+  width: 70px;
+  height: 70px;
+}
+/* usa-se a propriedade position relative para que o container filho possa ativar a position absolute */
+main {
+  position: relative;
+}
+
+img {
+  width: 450px;
+  height: 400px;
+}
+
+/* foi utilizado o display flex para que a imagem e o texto ficassem um do lado do outro */ 
+.container-principal {
+  margin-top: 50px;
+  justify-content: space-evenly;
+  display: flex;
+  align-items: center;
+}
+
+.texto-principal {
+  text-align: center;
+  line-height: 20px;
+}
+
+/* com a posição absolute e o bottom 0 o footer vai para o final da pagina */
+.rodape {
+  height: 50px;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  background: gray;
+}
+
+.paragrafo-rodape {
+  margin-top: 15px;
+  text-align: center;
+}
